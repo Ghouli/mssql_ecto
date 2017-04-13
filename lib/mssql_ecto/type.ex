@@ -61,6 +61,11 @@ defmodule MssqlEcto.Type do
     {:ok, result}
   end
 
+  def decode(value, type)
+  when type in [:map] and is_binary(value) do
+    {:ok, Poison.decode!(value)}
+  end
+
   def decode(value, _type) do
     {:ok, value}
   end

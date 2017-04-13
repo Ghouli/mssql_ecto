@@ -31,7 +31,7 @@ defmodule MssqlEcto.Mixfile do
 
   defp deps do
     [
-      {:mssqlex, git: "git://github.com/ghouli/mssqlex"},
+      {:mssqlex, github: "ghouli/mssqlex"},
       {:ecto, "~> 2.2.0"},
       {:ex_doc, "~> 0.15", only: :dev, runtime: false},
       {:excoveralls, "~> 0.6", only: :test},
